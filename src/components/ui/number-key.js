@@ -13,6 +13,7 @@ export default function NumberKey(props){
         }
         readOnly
         value={value}
+        onClick={() => props.clicked(value)}
       />
     );
 }

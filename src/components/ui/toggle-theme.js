@@ -1,22 +1,20 @@
 
-import { useContext, useEffect } from "react";
+import { useContext} from "react";
 import ThemeContext from "../../store/theme-context";
 export default function ToggleTheme(props) {
   const themeCtx = useContext(ThemeContext);
-  function changeHandler(e) {
-    const themeId = e.target.id;
-    if(themeId === 'theme1')
-    {
-     themeCtx.setTheme(1);
+    function changeHandler(e) {
+      const themeId = e.target.id;
+      if (themeId === "theme1") {
+        themeCtx.setTheme(1);
+      }
+      if (themeId === "theme2") {
+        themeCtx.setTheme(2);
+      }
+      if (themeId === "theme3") {
+        themeCtx.setTheme(3);
+      }
     }
-    if (themeId === "theme2") {
-       themeCtx.setTheme(2);
-    }
-     if (themeId === "theme3") {
-       themeCtx.setTheme(3);
-     }
-     
-  }
   return (
     <div className="">
       <label
@@ -64,13 +62,24 @@ export default function ToggleTheme(props) {
             >
               1
             </label>
-            <input
-              type="radio"
-              id="theme1"
-              name="theme"
-              className="sr-only z-2  mt-1 "
-              onChange={changeHandler}
-            />
+            {themeCtx.theme === 1 ? (
+              <input
+                type="radio"
+                id="theme1"
+                name="theme"
+                className="sr-only z-2  mt-1 "
+                checked
+                onChange={changeHandler}
+              />
+            ) : (
+              <input
+                type="radio"
+                id="theme1"
+                name="theme"
+                className="sr-only z-2  mt-1 "
+                onChange={changeHandler}
+              />
+            )}
           </div>
           <div
             className={
@@ -105,7 +114,8 @@ export default function ToggleTheme(props) {
               onChange={changeHandler}
             />
           </div>
-          <div className={
+          <div
+            className={
               themeCtx.theme === 1
                 ? "d-flex flex-column ms-2 theme1 "
                 : themeCtx.theme === 2
@@ -113,7 +123,8 @@ export default function ToggleTheme(props) {
                 : themeCtx.theme === 3
                 ? "d-flex flex-column ms-2 theme3"
                 : "d-flex flex-column ms-2"
-            }>
+            }
+          >
             <label
               htmlFor="theme3"
               className={

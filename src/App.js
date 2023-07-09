@@ -9,7 +9,58 @@ import RestKey from "./components/ui/rest-key";
 import EqualKey from "./components/ui/equal-key";
 function App() {
   const themeCtx = useContext(ThemeContext);
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
+  const [operator, setOperator] = useState(null);
   const [result, setResult] = useState(0);
+  function handleClicked(value)
+  {
+    if (value === "DEL") {
+    } else if (value === "REST") {
+      setResult(0);
+    } else if (value === "=") {
+      setNum2(parseInt(result));
+      switch (operator) {
+        case "+":
+          setResult(parseInt(num1) + parseInt(num2));
+          break;
+
+        case "-":
+          setResult(parseInt(num1) - parseInt(num2));
+          break;
+        case "x":
+          setResult(parseInt(num1) * parseInt(num2));
+          break;
+        case "/":
+          setResult(parseInt(num1) / parseInt(num2));
+          break;
+        default:
+          break;
+      }
+    } else if (value === "+") {
+      setNum1(parseInt(result));
+      setResult(0);
+      setOperator("+")
+    } else if (value === "-") {
+      setNum1(parseInt(result));
+      setResult(0);
+      setOperator("-");
+    } else if (value === "x") {
+      setNum1(parseInt(result));
+      setResult(0);
+      setOperator("x");
+    } else if (value === "/") {
+      setNum1(parseInt(result));
+      setResult(0);
+      setOperator("/");
+    }
+    else{
+ let tempResult = parseFloat(result);
+ tempResult += value;
+ setResult(tempResult);
+    }
+   
+  }
   return (
     <div
       className={
@@ -71,7 +122,7 @@ function App() {
               </h1>
             </div>
           </div>
-          <div className="row">
+          <div className="row mt-4">
             <div
               className={
                 themeCtx.theme === 1
@@ -85,40 +136,112 @@ function App() {
             >
               <div className="row">
                 <div className="col d-flex justify-content-around  ">
-                  <NumberKey theme={themeCtx.theme} value="7" />
-                  <NumberKey theme={themeCtx.theme} value="8" />
-                  <NumberKey theme={themeCtx.theme} value="9" />
-                  <DelKey theme={themeCtx.theme} value="DEL" />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="7"
+                    clicked={handleClicked}
+                  />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="8"
+                    clicked={handleClicked}
+                  />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="9"
+                    clicked={handleClicked}
+                  />
+                  <DelKey
+                    theme={themeCtx.theme}
+                    value="DEL"
+                    clicked={handleClicked}
+                  />
                 </div>
               </div>
               <div className="row my-4 ">
                 <div className="col d-flex justify-content-around  ">
-                  <NumberKey theme={themeCtx.theme} value="4" />
-                  <NumberKey theme={themeCtx.theme} value="5" />
-                  <NumberKey theme={themeCtx.theme} value="6" />
-                  <NumberKey theme={themeCtx.theme} value="+" />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="4"
+                    clicked={handleClicked}
+                  />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="5"
+                    clicked={handleClicked}
+                  />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="6"
+                    clicked={handleClicked}
+                  />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="+"
+                    clicked={handleClicked}
+                  />
                 </div>
               </div>
               <div className="row my-4">
                 <div className="col d-flex justify-content-around  ">
-                  <NumberKey theme={themeCtx.theme} value="1" />
-                  <NumberKey theme={themeCtx.theme} value="2" />
-                  <NumberKey theme={themeCtx.theme} value="3" />
-                  <NumberKey theme={themeCtx.theme} value="-" />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="1"
+                    clicked={handleClicked}
+                  />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="2"
+                    clicked={handleClicked}
+                  />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="3"
+                    clicked={handleClicked}
+                  />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="-"
+                    clicked={handleClicked}
+                  />
                 </div>
               </div>
               <div className="row my-4">
                 <div className="col d-flex justify-content-around  ">
-                  <NumberKey theme={themeCtx.theme} value="." />
-                  <NumberKey theme={themeCtx.theme} value="0" />
-                  <NumberKey theme={themeCtx.theme} value="/" />
-                  <NumberKey theme={themeCtx.theme} value="x" />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="."
+                    clicked={handleClicked}
+                  />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="0"
+                    clicked={handleClicked}
+                  />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="/"
+                    clicked={handleClicked}
+                  />
+                  <NumberKey
+                    theme={themeCtx.theme}
+                    value="x"
+                    clicked={handleClicked}
+                  />
                 </div>
               </div>
               <div className="row">
                 <div className="col d-flex justify-content-around  ">
-                  <RestKey theme={themeCtx.theme} value="REST" />
-                  <EqualKey theme={themeCtx.theme} value="=" />
+                  <RestKey
+                    theme={themeCtx.theme}
+                    value="REST"
+                    clicked={handleClicked}
+                  />
+                  <EqualKey
+                    theme={themeCtx.theme}
+                    value="="
+                    clicked={handleClicked}
+                  />
                 </div>
               </div>
             </div>

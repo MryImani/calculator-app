@@ -13,6 +13,7 @@ export default function EqualKey(props) {
       }
       readOnly
       value={value}
+      onClick={() => props.clicked(value)}
     />
   );
 }

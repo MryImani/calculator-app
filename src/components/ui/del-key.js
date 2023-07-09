@@ -13,6 +13,7 @@ export default function DelKey(props) {
       }
       readOnly
       value={value}
+      onClick={() => props.clicked(value)}
     />
   );
 }

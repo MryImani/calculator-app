@@ -78,18 +78,11 @@ background-color: hsl(222, 26%, 31%);
         content: '';
         display: inline-block;
         visibility: visible;
+        cursor: pointer;
     }
  .theme1 input[type='radio']:checked:after {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-         top: -4px;
-    left: -1px;
-        position: relative;
         background-color: hsl(6, 63%, 50%);
         content: '';
-        display: inline-block;
-        visibility: visible;
     }
 
 /* Text */
@@ -143,18 +136,10 @@ background-color: hsl(0, 0%, 90%);
         content: '';
         display: inline-block;
         visibility: visible;
+        cursor: pointer;
     }
  .theme2 input[type='radio']:checked:after {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-         top: -4px;
-    left: -1px;
-        position: relative;
         background-color: hsl(25, 98%, 40%);
-        content: '';
-        display: inline-block;
-        visibility: visible;
     }
 /* Text */
 .dark-grayish-yellow{
@@ -204,18 +189,10 @@ background-color: hsl(0, 0%, 90%);
         content: '';
         display: inline-block;
         visibility: visible;
+        cursor: pointer;
     }
  .theme3 input[type='radio']:checked:after {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-         top: -4px;
-    left: -1px;
-        position: relative;
         background-color: hsl(176, 100%, 44%);
-        content: '';
-        display: inline-block;
-        visibility: visible;
     }
 /* Text */
 
