@@ -1,0 +1,241 @@
+
+.app{
+  width: 100%;
+  min-height: 100vh;
+}
+.key,.del-key{
+  width: 18%;
+  text-align: center;
+  padding: 0 1rem;
+  font-weight: 900;
+  font-size: 2rem;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+}
+.del-key{
+   font-weight: 700;
+  font-size: 1.5rem;
+}
+.rest-key,.equal-key{
+  width: 42%;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+}
+.absolute-div{
+    position: absolute;
+    width: 54%;
+    height: 55%;
+    border-radius: 50px;
+    top: 1.4rem;
+    
+}
+/***********Theme 1*************/
+/* Backgrounds */
+.bg-main-theme1{
+background-color: hsl(222, 26%, 31%);
+}
+.bg-keypad-theme1{
+  background-color: hsl(223, 31%, 20%);
+}
+.bg-screen-theme1{
+  background-color: hsl(224, 36%, 15%)
+}
+
+/* Keys */
+
+.dark-blue{
+  background-color: hsl(225, 21%, 49%);
+  box-shadow:0px 5px 2px 0 hsl(224, 28%, 35%);
+  color:hsl(0, 0%, 100%);
+}
+
+.red{
+    background-color: hsl(6, 63%, 50%);
+  box-shadow:0px 5px 2px 0  hsl(6, 70%, 34%);
+  color:hsl(0, 0%, 100%);
+}
+.grayish-orange{
+    background-color: hsl(30, 25%, 89%);
+  box-shadow:0px 5px 2px 0  hsl(28, 16%, 65%);
+  
+}
+
+/*radio btn*/
+  .theme1  input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -4px;
+    left: -1px;
+        position: relative;
+        background-color: hsl(223, 31%, 20%);
+        content: '';
+        display: inline-block;
+        visibility: visible;
+    }
+ .theme1 input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+         top: -4px;
+    left: -1px;
+        position: relative;
+        background-color: hsl(6, 63%, 50%);
+        content: '';
+        display: inline-block;
+        visibility: visible;
+    }
+
+/* Text */
+
+.dark-grayish-blue{
+  color: hsl(221, 14%, 31%);
+}
+.white{
+  color:hsl(0, 0%, 100%);
+} 
+
+/***********Theme 2*************/
+
+/* Backgrounds */
+.bg-main-theme2{
+background-color: hsl(0, 0%, 90%);
+}
+.bg-keypad-theme2{
+  background-color: hsl(0, 5%, 81%);
+}
+.bg-screen-theme2{
+  background-color:  hsl(0, 0%, 93%)
+}
+
+/* Keys */
+.dark-moderate-cyan{
+  background-color: hsl(185, 42%, 37%);
+  box-shadow:0px 5px 2px 0 hsl(185, 58%, 25%) ;
+  color:hsl(0, 0%, 100%);
+}
+
+.orange{
+    background-color: hsl(25, 98%, 40%);
+  box-shadow:0px 5px 2px 0  hsl(25, 99%, 27%);
+  color:hsl(0, 0%, 100%);
+}
+.grayish-yellow{
+    background-color: hsl(45, 7%, 89%);
+  box-shadow:0px 5px 2px 0  hsl(35, 11%, 61%);
+}
+
+/*radio btn*/
+  .theme2  input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -4px;
+    left: -1px;
+        position: relative;
+        background-color:  hsl(0, 5%, 81%);
+        content: '';
+        display: inline-block;
+        visibility: visible;
+    }
+ .theme2 input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+         top: -4px;
+    left: -1px;
+        position: relative;
+        background-color: hsl(25, 98%, 40%);
+        content: '';
+        display: inline-block;
+        visibility: visible;
+    }
+/* Text */
+.dark-grayish-yellow{
+  color: hsl(60, 10%, 19%);
+}
+
+
+/***********Theme 3*************/
+
+/* Backgrounds */
+.bg-main-theme3{
+  background-color: hsl(268, 75%, 9%);
+}
+.bg-keypad-theme3{
+  background-color: hsl(268, 71%, 12%)
+}
+
+.bg-screen-theme3{
+  background-color: hsl(268, 71%, 12%)
+}
+
+
+/* Keys */
+.dark-violet{
+  background-color: hsl(281, 89%, 26%);
+  box-shadow:0px 5px 2px 0 hsl(285, 91%, 52%) ;
+  color:hsl(0, 0%, 100%);
+}
+
+.pure-cyan{
+    background-color: hsl(176, 100%, 44%);
+  box-shadow:0px 5px 2px 0  hsl(177, 92%, 70%);
+}
+.grayish-magenta{
+    background-color: hsl(268, 47%, 21%);
+  box-shadow:0px 5px 2px 0  hsl(290, 70%, 36%);
+}
+/*radio btn*/
+  .theme3  input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -4px;
+    left: -1px;
+        position: relative;
+        background-color:hsl(268, 71%, 12%);
+        content: '';
+        display: inline-block;
+        visibility: visible;
+    }
+ .theme3 input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+         top: -4px;
+    left: -1px;
+        position: relative;
+        background-color: hsl(176, 100%, 44%);
+        content: '';
+        display: inline-block;
+        visibility: visible;
+    }
+/* Text */
+
+.light-yellow{
+color:hsl(52, 100%, 62%);
+}
+
+.text-dark-blue{
+  color:hsl(198, 20%, 13%);
+}
+
+
+@media screen and (min-width:992px){
+  .content{
+    width: 38%;
+    margin: 0 auto;
+  }
+  
+}
+
+
+
+

@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cinzel&family=Fauna+One&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@700&family=Poppins&family=Red+Hat+Display:wght@500;700;900&family=Rowdies:wght@700&family=Sassy+Frass&display=swap');
+body {
+  margin: 0;
+  font-family:'League Spartan', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
