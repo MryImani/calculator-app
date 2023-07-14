@@ -82,7 +82,7 @@ export default function AppView() {
           : "app"
       }
     >
-      <div className=" container-md px-4  pt-5 ">
+      <div className=" container-md px-4  lg:pt-5 ">
         <div className="content">
           <div className="row align-center pt-5 ">
             <div className="col-6">
